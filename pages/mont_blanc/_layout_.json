@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Mont Blanc 4807 m",
+        "color": "white",
+        "size": 16,
+        "x": 140,
+        "y": 80,
+        "italic": true
+    },
+    {
+        "text": "23 juillet 2024",
+        "color": "white",
+        "size": 12,
+        "x": 140,
+        "y": 60,
+        "italic": true
+    }
+]
