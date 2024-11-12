@@ -68,10 +68,9 @@ Essentially, `book.py` will parse `activities_ids.json` and build one page per a
         -d --directory        Open directory
 
 Pages directories are generated based on, either:
-
-    * a single activity id
-    * several merged activity ids
-    * a string, designating a directory with a full page photo
+* a single activity id
+* several merged activity ids
+* a string, designating a directory with a full page photo
 
 I used MapTiler for mapping and geo-coding APIs and Stadia for the elevation API. API keys live in `config.json`.
 
