@@ -1,9 +1,10 @@
 
 Strava Book
 ===========
-I chose to create a book based on our shared  [Strava](https://www.strava.com/) activities, as a gift to my partner.
 
-The book is generated semi-automatically with the code in this repo. This is not production code, but hacky code that works on my machine instead. Feel free to use it as you wish to generate your own books.
+I created a book based on our shared  [Strava](https://www.strava.com/) activities, as a gift to my partner.
+
+The book is generated semi-automatically with the code in this repo. Beware, this is not production code, but hacky code that works on my machine instead. Feel free to use it as you wish as inspiration to generate your own books.
 
 While this readme file is not a documentation, it explains most of what you need to know. The rest is left up to the reader :)
 
@@ -22,7 +23,7 @@ While this readme file is not a documentation, it explains most of what you need
     map_maker.py             - calls static maps API
     page_creator.py          - created a PDF out of an activity
     elevation_chart.py       - draws the elevation chart
-    elevation.py             - gets elevations out of polyline
+    elevation.py             - gets elevations data out of polylines
     icons/                   - various SVG icons used in the book
     images/                  - various PNG images used in the book
     polyline_decoder.py      - converts polyline into coordinates
@@ -54,9 +55,9 @@ While this readme file is not a documentation, it explains most of what you need
 
 Generating the book is an incremental process.
 
-Essentially, `book.py` will parse `activities_ids.json` and build one page per activites.
+Essentially, `book.py` will parse `activities_ids.json` and build one page per list of activities.
 
-`book.py` can be used with options, depending on need you want to achieve.
+`book.py` can be used with options, depending on what you want to achieve.
 
     python3 book.py
         -s --sequential       Sequential (no parallelism)
@@ -72,8 +73,6 @@ Pages directories are generated based on, either:
 * several merged activity ids
 * a string, designating a directory with a full page photo
 
-I used MapTiler for mapping and geo-coding APIs and Stadia for the elevation API. API keys live in `config.json`.
-
 Sample `activities_ids.json`
 
         [
@@ -86,10 +85,12 @@ Sample `activities_ids.json`
 
 You typically want to customize the pages by editing `_meta_.json` and `photos/`, and regenerate the pages when done.
 
+I used MapTiler for mapping and geo-coding APIs and Stadia for the elevation API. API keys live in `config.json`.
+
 ### 4. PDF post-processing for print
 
     gs -o book_print.pdf -sDEVICE=pdfwrite -dEmbedAllFonts=true -dPDFSETTINGS=/prepress -dDownsampleColorImages=false -dDownsampleGrayImages=false -dDownsampleMonoImages=false -dColorImageResolution=300 -dGrayImageResolution=300 -dMonoImageResolution=1200 book.pdf
 
 ### 5. Upload the book and create the cover
 
-See https://pdf-to-book.bookfactory.ch/
+See https://pdf-to-book.bookfactory.ch
