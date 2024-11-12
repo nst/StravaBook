@@ -7,6 +7,9 @@ The book is generated semi-automatically with the code in this repo. This is not
 
 While this readme file is not a documentation, it explains most of what you need to know. The rest is left up to the reader :)
 
+![Strava Book](preview_1.jpg "Strava Book")
+![Strava Book](preview_2.jpg "Strava Book")
+
 ###  Description of the Files
 
     1_download_activities.py - download all your Strava activities
