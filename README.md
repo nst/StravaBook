@@ -68,7 +68,8 @@ Essentially, `book.py` will parse `activities_ids.json` and build one page per a
         -d --directory        Open directory
 
 Pages directories are generated based on, either:
-   * a single activity id
+
+    * a single activity id
     * several merged activity ids
     * a string, designating a directory with a full page photo
 
