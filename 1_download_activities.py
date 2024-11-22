@@ -6,7 +6,7 @@ import sys
 import config
 
 # https://www.strava.com/settings/api
-if len(config.STRAVA_CLIENT_ID) == 0 or len(STRAVA_CLIENT_SECRET) == 0:
+if len(config.STRAVA_CLIENT_ID) == 0 or len(config.STRAVA_CLIENT_SECRET) == 0:
     print("(!) Strava client ID or Strava client secret is missing")
     sys.exit(1)
 
@@ -14,7 +14,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Authorization URL
 auth_url = (
-    f'https://www.strava.com/oauth/authorize?client_id={client_id}&'
+    f'https://www.strava.com/oauth/authorize?client_id={config.STRAVA_CLIENT_ID}&'
     'redirect_uri=http://127.0.0.1&response_type=code&scope=activity:read_all&approval_prompt=auto'
 )
 
