@@ -4,6 +4,7 @@ import os
 import sys
 import polyline_decoder
 import json_utils
+import config
 
 import page_creator
 

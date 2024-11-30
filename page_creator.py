@@ -8,13 +8,10 @@ import json
 from typing import Dict, List
 from collections import namedtuple
 
-#from PIL import Image
-
 import map_maker
 import json_utils
 import config
 
-from reportlab.lib.pagesizes import letter
 from reportlab.graphics import renderPDF
 from reportlab.lib import colors
 from reportlab.pdfgen import canvas
